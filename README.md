@@ -4,7 +4,7 @@
 <p align="center"><b>Wi-Fi + LAN aktif bersamaan di Windows: satu internet gabungan.</b><br>
 Ditambah <b>LAN Otomatis</b>: IP static di kantor, DHCP di rumah, tinggal colok kabel.</p>
 
-<p align="center"><img src="assets/screenshot.png" width="760" alt="Tampilan DualNet"></p>
+<p align="center"><img src="assets/screenshot-dark.png" width="49%" alt="Tema gelap"> <img src="assets/screenshot-light.png" width="49%" alt="Tema terang"></p>
 
 ---
 
@@ -25,6 +25,11 @@ Ditambah <b>LAN Otomatis</b>: IP static di kantor, DHCP di rumah, tinggal colok 
 - Profil kantor bisa diambil sekali klik dari setting LAN yang sedang aktif.
 - Mendukung banyak IP sekaligus, gateway dan DNS.
 - Opsi jalan otomatis saat Windows login (Task Scheduler, tanpa prompt UAC).
+
+**Tampilan**
+- Tema **Terang**, **Gelap**, atau **Auto** (mengikuti pengaturan Windows, berganti otomatis).
+- Palet netral dengan warna solid, tanpa gradasi.
+- Font: Bitcount Ink (logo & angka besar), Space Grotesk (judul & tombol), Archivo Narrow (teks & data).
 
 **Ringan**
 - Status kabel/adapter dibaca langsung dari Windows API (`GetIfEntry2`), tanpa memanggil PowerShell berulang.
@@ -63,14 +68,14 @@ pip install pyinstaller
 build.bat
 ```
 
-Hasil: `dist\DualNet\DualNet.exe` dan `release\DualNet-Setup-1.0.0.exe`.
+Hasil: `dist\DualNet\DualNet.exe` dan `release\DualNet-Setup-1.1.0.exe`.
 Menjalankan langsung tanpa build: `python dualnet.py` (sebagai Administrator untuk fitur LAN Otomatis).
 
 ## Struktur
 
 | File | Isi |
 |---|---|
-| `dualnet.py` | GUI (Tkinter, tema gelap custom) |
+| `dualnet.py` | GUI (Tkinter, tema terang / gelap / auto) |
 | `core.py` | Deteksi adapter, load balancer, proxy SOCKS5/HTTP, proxy sistem |
 | `autolan.py` | Deteksi kantor/rumah, ganti Static/DHCP, autostart |
 | `winnet.py` | Status adapter via Windows API (ctypes) |
@@ -78,4 +83,4 @@ Menjalankan langsung tanpa build: `python dualnet.py` (sebagai Administrator unt
 ## Lisensi
 
 MIT © 2026 **Bayu Saputra**. Lihat [LICENSE](LICENSE).
-Font: Chakra Petch dan IBM Plex Mono, SIL Open Font License 1.1.
+Font: Bitcount Ink, Space Grotesk dan Archivo Narrow, SIL Open Font License 1.1.

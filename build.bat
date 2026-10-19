@@ -13,4 +13,4 @@ set ISCC="%LOCALAPPDATA%\Programs\Inno Setup 6\ISCC.exe"
 if not exist %ISCC% set ISCC="C:\Program Files (x86)\Inno Setup 6\ISCC.exe"
 %ISCC% installer.iss || exit /b 1
 echo.
-echo Selesai: dist\DualNet\DualNet.exe  dan  release\DualNet-Setup-1.0.0.exe
+echo Selesai: dist\DualNet\DualNet.exe  dan  release\DualNet-Setup-1.1.0.exe

@@ -2,6 +2,8 @@ DualNet
 Copyright (c) 2026 Bayu Saputra
 
 Bundled fonts (folder fonts/) are licensed under the SIL Open Font License 1.1:
-  - Chakra Petch  (c) 2018 The Chakra Petch Project Authors
-  - IBM Plex Mono (c) 2017 IBM Corp.
-See fonts/OFL-ChakraPetch.txt and fonts/OFL-IBMPlexMono.txt.
+  - Bitcount Ink    (c) The Bitcount Project Authors
+  - Space Grotesk   (c) The Space Grotesk Project Authors
+  - Archivo Narrow  (c) The Archivo Project Authors
+Static, subset instances were generated from the variable fonts for use in this app.
+See fonts/OFL-BitcountInk.txt, fonts/OFL-SpaceGrotesk.txt and fonts/OFL-ArchivoNarrow.txt.

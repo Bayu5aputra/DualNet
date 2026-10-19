@@ -13,6 +13,8 @@ import subprocess
 import threading
 import time
 
+import winnet
+
 try:
     import winreg
 except ImportError:
@@ -68,7 +70,7 @@ def detect_interfaces():
                 pass
         if not chosen and addrs:
             chosen = addrs[0].split("/")[0]
-        if chosen and not chosen.startswith("169.254."):
+        if chosen and not chosen.startswith("169.254.") and winnet.is_up(d.get("Alias") or ""):
             result.append({"alias": d.get("Alias"), "desc": d.get("Desc"),
                            "ip": chosen, "gw": gw})
     return result
